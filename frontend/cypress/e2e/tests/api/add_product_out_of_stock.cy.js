@@ -1,8 +1,7 @@
-describe('API - Add Product To Cart', () => {
+describe('API - Add Product Out Of Stock', () => {
 
-  it('should add available product to cart', () => {
+  it('should add a product even when stock is unavailable', () => {
 
-    // Login
     cy.request({
       method: 'POST',
       url: 'http://localhost:8081/login',
@@ -14,12 +13,11 @@ describe('API - Add Product To Cart', () => {
 
       const token = loginResponse.body.token
 
-      // Procurar um produto com stock positivo
       cy.request('http://localhost:8081/products')
         .then((productsResponse) => {
 
           const product = productsResponse.body.find(
-            p => p.availableStock > 0
+            p => p.availableStock <= 0
           )
 
           expect(product).to.exist
@@ -27,7 +25,6 @@ describe('API - Add Product To Cart', () => {
           cy.log('PRODUCT ID = ' + product.id)
           cy.log('STOCK = ' + product.availableStock)
 
-          // Adicionar ao carrinho
           cy.request({
             method: 'PUT',
             url: 'http://localhost:8081/orders/add',
@@ -41,6 +38,9 @@ describe('API - Add Product To Cart', () => {
           }).then((response) => {
 
             expect(response.status).to.eq(200)
+
+            expect(response.body)
+              .to.have.property('orderLines')
 
           })
 
