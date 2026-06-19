@@ -1,6 +1,6 @@
 describe('API - Add Product Out Of Stock', () => {
 
-  it('should add a product even when stock is unavailable', () => {
+  it('should refuse adding a product without stock', () => {
 
     cy.request({
       method: 'POST',
@@ -22,12 +22,10 @@ describe('API - Add Product Out Of Stock', () => {
 
           expect(product).to.exist
 
-          cy.log('PRODUCT ID = ' + product.id)
-          cy.log('STOCK = ' + product.availableStock)
-
           cy.request({
             method: 'PUT',
             url: 'http://localhost:8081/orders/add',
+            failOnStatusCode: false,
             headers: {
               Authorization: `Bearer ${token}`
             },
@@ -37,10 +35,8 @@ describe('API - Add Product Out Of Stock', () => {
             }
           }).then((response) => {
 
-            expect(response.status).to.eq(200)
-
-            expect(response.body)
-              .to.have.property('orderLines')
+            
+            expect(response.status).to.not.eq(200)
 
           })
 
@@ -52,4 +48,4 @@ describe('API - Add Product Out Of Stock', () => {
 
 })
 
-// Verifica o comportamento da API quando se tenta adicionar um produto sem stock disponível.
+// Verifica o comportamento da API quando se tenta adicionar um produto sem stock disponível. Um produto sem stock não deve poder ser adicionado ao carrinho. O teste da positivo e nao devia.

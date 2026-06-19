@@ -88,5 +88,5 @@ describe('Functional Test - Stock Update After Add To Cart', () => {
 
 })
 
-// Seleciona automaticamente um produto com stock superior a 1 para garantir a validade do teste.
+// Seleciona automaticamente um produto com stock superior a 1.
 // Verifica que o stock diminui após a adição de um produto ao carrinho.
