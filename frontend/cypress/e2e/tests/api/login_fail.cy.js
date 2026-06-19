@@ -19,3 +19,5 @@ describe('API - Login Fail', () => {
   })
 
 })
+
+// Verifica que a API recusa credenciais inválidas e devolve HTTP 401.

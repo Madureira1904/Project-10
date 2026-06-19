@@ -93,3 +93,5 @@ describe('Functional Test - Panier', () => {
   })
 
 })
+
+// Verifica que o produto adicionado aparece corretamente no carrinho.

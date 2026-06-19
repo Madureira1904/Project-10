@@ -18,3 +18,5 @@ describe('Panier - quantité supérieure à 20', () => {
   })
 
 })
+
+// Verifica que o sistema aplica corretamente valores superiores 20

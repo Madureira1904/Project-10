@@ -1,4 +1,4 @@
-describe('Smoke Test - Login Page', () => {
+describe('Smoke Test - Login Page', () => { 
 
   it('should display login form elements', () => {
 
@@ -16,3 +16,5 @@ describe('Smoke Test - Login Page', () => {
   })
 
 })
+
+// Verifica que um utilizador válido consegue autenticar-se e aceder à aplicação.

@@ -46,3 +46,5 @@ describe('Security Test - XSS Review', () => {
   })
 
 })
+
+// Verifica que um script inserido num comentário não é executado nem apresentado ao utilizador.

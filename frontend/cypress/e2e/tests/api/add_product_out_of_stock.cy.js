@@ -51,3 +51,5 @@ describe('API - Add Product Out Of Stock', () => {
   })
 
 })
+
+// Verifica o comportamento da API quando se tenta adicionar um produto sem stock disponível.

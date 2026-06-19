@@ -51,3 +51,5 @@ describe('API - Add Product To Cart', () => {
   })
 
 })
+
+// Verifica que um produto disponível pode ser adicionado ao carrinho através da API.

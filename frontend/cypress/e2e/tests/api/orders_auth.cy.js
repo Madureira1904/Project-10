@@ -36,3 +36,5 @@ describe('API - Orders Authenticated', () => {
   })
 
 })
+
+// Verifica que um utilizador autenticado consegue consultar o conteúdo do seu carrinho.

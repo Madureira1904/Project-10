@@ -15,3 +15,5 @@ describe('Panier - disponibilité produit', () => {
   })
 
 })
+
+// Verifica que o stock disponível é apresentado na página do produto.

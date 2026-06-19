@@ -22,3 +22,5 @@ describe('Functional Test - Connexion', () => {
   })
 
 })
+
+// Verifica o processo completo de autenticação através da interface utilizador.

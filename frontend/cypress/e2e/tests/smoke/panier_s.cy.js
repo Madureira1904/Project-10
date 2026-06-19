@@ -25,3 +25,5 @@ describe('Smoke Test - Panier', () => {
   })
 
 })
+
+// Verifica  que um produto pode ser adicionado ao carrinho e que o fluxo principal funciona.

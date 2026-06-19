@@ -23,3 +23,5 @@ describe('Functional Test - Produit', () => {
   })
 
 })
+
+// Verifica a apresentação das informações detalhadas de um produto.

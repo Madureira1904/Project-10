@@ -52,3 +52,5 @@ describe('API - Add Review', () => {
   })
 
 })
+
+// Verifica que um utilizador autenticado consegue criar um novo comentário.

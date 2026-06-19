@@ -24,3 +24,5 @@ describe('API - Product Detail', () => {
   })
 
 })
+
+// Verifica que a API devolve corretamente as informações de um produto específico.

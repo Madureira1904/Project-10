@@ -15,3 +15,5 @@ describe('API - Orders Without Authentication', () => {
   })
 
 })
+
+// Verifica que o endpoint /orders está protegido e exige autenticação.

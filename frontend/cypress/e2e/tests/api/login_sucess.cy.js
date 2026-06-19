@@ -21,3 +21,5 @@ describe('API - Login Success', () => {
   })
 
 })
+
+// Verifica que a API autentica corretamente um utilizador válido e devolve um JWT.
