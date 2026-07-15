@@ -1,6 +1,6 @@
 describe('Panier - disponibilité produit', () => {
 
-  it('should display stock and allow product if stock > 1', () => {
+  it('should display stock', () => {
 
     cy.visit('http://localhost:4200/#/products')
 

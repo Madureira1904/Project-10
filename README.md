@@ -37,4 +37,26 @@ npm i
 ou
 npm install (si vous préférez)
 ```
+# Exécution des tests Cypress
 
+Depuis le dossier `frontend`, lancez Cypress avec la commande :
+
+```bash
+npx cypress open
+```
+
+Une fois Cypress ouvert :
+
+- Sélectionnez **E2E Testing** ;
+- Choisissez le navigateur souhaité (Chrome) ;
+- Cliquez sur le fichier de test que vous souhaitez exécuter.
+
+Pour exécuter tous les tests en mode graphique, ouvrez chaque fichier de test depuis Cypress.
+
+# Exécution des tests en ligne de commande
+
+Pour exécuter l'ensemble des tests sans ouvrir l'interface Cypress :
+
+```bash
+npx cypress run
+```

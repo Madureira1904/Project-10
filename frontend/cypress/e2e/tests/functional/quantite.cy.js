@@ -19,4 +19,4 @@ describe('Panier - quantité négative', () => {
 
 })
 
-// Verifica que o sistema rejeita quantidades negativas.
+// Verifica que o sistema aceita quantidades negativas.
