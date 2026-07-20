@@ -3,16 +3,7 @@ describe('API - Add Review', () => {
   it('should create a new review', () => {
 
     // Login
-    cy.request({
-      method: 'POST',
-      url: 'http://localhost:8081/login',
-      body: {
-        username: 'test2@test.fr',
-        password: 'testtest'
-      }
-    }).then((loginResponse) => {
-
-      const token = loginResponse.body.token
+    cy.apiLogin().then((token) => {
 
       // Criar review
       cy.request({

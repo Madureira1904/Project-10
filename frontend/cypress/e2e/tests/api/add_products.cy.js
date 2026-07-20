@@ -3,16 +3,7 @@ describe('API - Add Product To Cart', () => {
   it('should add available product to cart', () => {
 
     // Login
-    cy.request({
-      method: 'POST',
-      url: 'http://localhost:8081/login',
-      body: {
-        username: 'test2@test.fr',
-        password: 'testtest'
-      }
-    }).then((loginResponse) => {
-
-      const token = loginResponse.body.token
+    cy.apiLogin().then((token) => {
 
       // Procurar um produto com stock positivo
       cy.request('http://localhost:8081/products')

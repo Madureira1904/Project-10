@@ -2,16 +2,9 @@ describe('API - Negative Quantity', () => {
 
   it('should refuse negative quantity', () => {
 
-    cy.request({
-      method: 'POST',
-      url: 'http://localhost:8081/login',
-      body: {
-        username: 'test2@test.fr',
-        password: 'testtest'
-      }
-    }).then((loginResponse) => {
+    // Login
+    cy.apiLogin().then((token) => {
 
-      const token = loginResponse.body.token
 
       cy.request('http://localhost:8081/products')
         .then((productsResponse) => {

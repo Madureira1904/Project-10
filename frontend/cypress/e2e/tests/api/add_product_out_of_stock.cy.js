@@ -2,16 +2,8 @@ describe('API - Add Product Out Of Stock', () => {
 
   it('should refuse adding a product without stock', () => {
 
-    cy.request({
-      method: 'POST',
-      url: 'http://localhost:8081/login',
-      body: {
-        username: 'test2@test.fr',
-        password: 'testtest'
-      }
-    }).then((loginResponse) => {
-
-      const token = loginResponse.body.token
+    // Login
+    cy.apiLogin().then((token) => {
 
       cy.request('http://localhost:8081/products')
         .then((productsResponse) => {

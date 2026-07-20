@@ -6,19 +6,7 @@ describe('Functional Test - Stock Update After Add To Cart', () => {
     let stockInitial
 
     // Login
-    cy.visit('http://localhost:4200/#/login')
-
-    cy.get('[data-cy="login-input-username"]')
-      .type('test2@test.fr')
-
-    cy.get('[data-cy="login-input-password"]')
-      .type('testtest')
-
-    cy.get('[data-cy="login-submit"]')
-      .click()
-
-    cy.contains('Déconnexion')
-      .should('be.visible')
+    cy.login()
 
     // Procurar produto com stock > 1
     cy.request('http://localhost:8081/products')

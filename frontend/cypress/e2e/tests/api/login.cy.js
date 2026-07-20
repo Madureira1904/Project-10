@@ -18,22 +18,7 @@ describe('API - Login', () => {
     })
 
     // Tentative avec utilisateur valide
-    cy.request({
-      method: 'POST',
-      url: 'http://localhost:8081/login',
-      body: {
-        username: 'test2@test.fr',
-        password: 'testtest'
-      }
-    }).then((response) => {
-
-      expect(response.status).to.eq(200)
-
-      expect(response.body)
-        .to.have.property('token')
-
-      expect(response.body.token)
-        .to.not.be.empty
+    cy.apiLogin().then((token) => {
 
     })
 

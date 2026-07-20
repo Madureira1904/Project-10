@@ -2,6 +2,7 @@ describe('API - Product Detail', () => {
 
   it('should return a specific product', () => {
 
+
     cy.request('http://localhost:8081/products/5')
       .then((response) => {
 

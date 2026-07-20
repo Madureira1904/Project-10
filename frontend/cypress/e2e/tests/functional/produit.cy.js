@@ -2,6 +2,8 @@ describe('Functional Test - Produit', () => {
 
   it('should display product details', () => {
 
+    cy.login()
+
     cy.visit('http://localhost:4200/#/products')
 
     cy.contains('Consulter')

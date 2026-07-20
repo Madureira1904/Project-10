@@ -3,19 +3,7 @@ describe('Functional Test - Panier', () => {
   it('should add a product to cart and verify API', () => {
 
     // Login
-    cy.visit('http://localhost:4200/#/login')
-
-    cy.get('[data-cy="login-input-username"]')
-      .type('test2@test.fr')
-
-    cy.get('[data-cy="login-input-password"]')
-      .type('testtest')
-
-    cy.get('[data-cy="login-submit"]')
-      .click()
-
-    cy.contains('Déconnexion')
-      .should('be.visible')
+    cy.login()
 
     // Ir para produtos
     cy.visit('http://localhost:4200/#/products')

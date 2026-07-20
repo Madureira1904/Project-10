@@ -2,16 +2,8 @@ describe('API - Orders Authenticated', () => {
 
   it('should return current user cart', () => {
 
-    cy.request({
-      method: 'POST',
-      url: 'http://localhost:8081/login',
-      body: {
-        username: 'test2@test.fr',
-        password: 'testtest'
-      }
-    }).then((loginResponse) => {
-
-      const token = loginResponse.body.token
+    // Login
+    cy.apiLogin().then((token) => {
 
       cy.request({
         method: 'GET',

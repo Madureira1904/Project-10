@@ -2,6 +2,8 @@ describe('Panier - disponibilité', () => {
 
   it('should display stock field', () => {
 
+    cy.login()
+
     cy.visit('http://localhost:4200/#/products')
 
     cy.get('[data-cy="product-link"]')
